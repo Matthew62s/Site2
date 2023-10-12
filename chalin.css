@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Стили для кнопки меню */
+.menu-button {
+    display: none;
+    margin-left: 30%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    transition: color 0.3s ease-in-out; /* Плавное изменение цвета текста при наведении */
+}
+
+
+.menu-button:hover {
+    color: red; /* Цвет при наведении */
+}
+
+.menu-button:focus {
+    outline: none;
+}
+
+.menu-item {
+    font-size: 20px;
+    margin-bottom: 10px; /* Отступ между элементами li */
+    display: flex; /* Устанавливаем элементы li как блочные элементы */
+}
+.menu-wrapper {
+    margin-left: 50px;
+}
+@media (max-width: 768px) {
+    .menu-wrapper {
+        position: fixed;
+        top: 0;
+        right: -250px; 
+        height: 100%;
+        background-color: black;
+        width: 150px;
+        overflow-y: auto; 
+        transition: right 0.3s ease-in-out; 
+        z-index: 999;
+    }
+    .menu-button {
+        display: block;
+    }
+    
+    .menu {
+        
+        display:block;
+        text-align: center; /* Выравниваем элементы по центру */
+    }
+    .cont-menu{
+        margin-left: 10%;
+        margin-top: 40%;
+    }
+    .menu-item {
+        
+        margin-bottom: 15px; /* Увеличиваем отступ между элементами li */
+    }
+}
+@media (min-width: 1000px) {
+    .menu{
+        margin-left: 50px;
+        display:flex;
+        gap: 15px;
+        list-style: none;
+    }
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url(logo.png) no-repeat;
+    background-size: cover; 
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: red;
+}
+
+li {
+    font-size: 20px;
+}
+
+body {
+    font-family: Arial;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.container {
+    max-width: 1920px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.welcome {
+    position: absolute;
+    margin-top: 100px;
+    color: white;
+}
+
+.welcome .container {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 16px;
+    color: white;
+    transition: color 0.5s ease-in-out;
+    text-transform: uppercase;
+    background: #E56D16;
+}
+
+/* .photo-credit{
+    position: absolute;
+    margin: 0 auto;
+} */
+.ph{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.title {
+    margin-left: 50px;
+    padding-bottom: 20px;
+    max-width: 700px;
+    font-size: 56px;
+}
+
+.text {
+    margin-left: 50px;
+    padding-bottom: 40px;
+    max-width: 500px;
+    font-size: 18px;
+}
+
+
+/* .blocks {
+    display: flex;
+} */
+
+
+@media (min-height: 600px) {
+    
+    .title{
+        font-size: 34px;
+        margin-top: 70%;
+    }
+    .text{
+        padding-bottom: 30px;
+        max-width: 300px;
+    }
+}

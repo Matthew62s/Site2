@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="chalin.css">
+    <title>Burger (bin chalin) title</title> <!-- Исправлены кавычки и закрывающий тег title -->
+</head>
+<body>
+    <video playsinline muted loop autoplay poster="logo.png" id="bgvid">
+        <source src="credit.mp4" type="video/mp4">
+    </video> 
+ 
+    <div class="header">
+        <div class="container">
+            <button class="menu-button" id="menu-button">&#9776;</button>
+        
+            <div class="menu-wrapper" id="menu-wrapper">
+                <div class="cont-menu">
+                    <ul class="menu" id="menu">
+                        <li class="menu-item">
+                            <a href="https://www.youtube.com/watch?v=ZBDRIy4X2sU" class="link">Главная</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://www.youtube.com/watch?v=ZBDRIy4X2sU" class="link">Отзывы</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://www.youtube.com/watch?v=ZBDRIy4X2sU" class="link">Цены</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://www.youtube.com/watch?v=ZBDRIy4X2sU" class="link">Компания</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- <div class="photo-credit" id="photo_cont">
+        <img src="logo.png" class="ph" id="photo">
+    </div> -->
+    <img src="logo.png" class="ph" id="photo">
+    <div class="welcome">
+        <div class="container">
+            <h1 class="title">Проверь свой social credit</h1> 
+            <p class="text">
+                你的社會信用高，黨就靠你。黨的光榮！！！
+            </p>
+            <a class="btn" id="showsc">Проверить социальный кредит</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var video = document.getElementById("bgvid");
+            var poster = video.getAttribute("poster");
+            var delayInSeconds = 1000;
+ 
+            setTimeout(function() {
+                video.setAttribute("poster", poster);
+                video.play();
+            }, delayInSeconds);
+
+            var getbtn = document.getElementById("showsc");
+            var photo_cont = document.getElementById("photo_cont");
+            var photo = document.getElementById("photo");
+
+            getbtn.addEventListener("click", function() {
+                photo.style.display = "block";
+            
+                setTimeout(function () {
+                    photo.style.transform = "translate(-50%, -50%) scale(3)";
+                    
+                    photo.style.opacity = "1";
+                }, 100);
+                setTimeout(function () {
+                    photo.style.transform = "translate(-50%, -50%) scale(1)";
+                    
+                    photo.style.opacity = "0";
+                }, 600);
+
+            });
+
+
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
